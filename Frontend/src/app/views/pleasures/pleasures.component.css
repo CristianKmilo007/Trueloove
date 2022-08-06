@@ -1,0 +1,119 @@
+body {
+    /*background-image: url(/My_class_projects/Assets/Images/images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;*/
+    background: linear-gradient(#e6e6e6, #842ccf) !important;
+    color: #8e8e8e !important;
+    text-align: center;
+    max-height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .mainSection{
+    width: 100%;
+  }
+  
+  form {
+    /*background: linear-gradient(#8BB2EB, #842ccf) !important;
+    background-color: #E8E8E8;*/
+    background-image: url(/My_class_projects/Assets/Images/16125250911786.jpg);
+    max-width: 500px;
+    
+    margin: 50px auto;
+    padding: 30px 20px;
+    font-weight: bolder;
+    
+  }
+  
+  
+  .form-control {
+    text-align: left;
+    margin-bottom: 25px;
+  }
+  
+  
+  .form-control label {
+    margin-bottom: 10px;
+  }
+  
+  .twoItems{
+    border-bottom: #251c2e solid 10px;
+    border-top: #3f136b solid 10px;
+    border-left: #7443a5 solid 10px;
+    border-right: #8e67b1 solid 10px;
+    border-radius: 10px;
+  }
+  
+  form > button{
+    
+    transition: background 10s;
+  
+  }
+  
+  
+  form > button > a{
+    color: #251c2e;
+    text-decoration: none;
+  }
+  
+  form > button > a:hover{
+    transition: 3s;
+    color: #e6e6e6;
+  }
+  
+  form > button:hover{
+    background: linear-gradient(#e6e6e6, #842ccf) !important;
+  
+  }
+  
+  
+  /*
+  
+  label:hover{
+    font-size: 25px;
+  }
+  
+  
+  /*
+  .form-control input,
+  .form-control select,
+  .form-control textarea,
+  .form-type {
+    border: 1px solid #777;
+    border-radius: 2px;
+    font-family: inherit;
+    padding: 10px;
+    display: block;
+    width: 95%;
+  }
+  
+  .form-control input[type="radio"],
+  .form-control input[type="checkbox"],
+  .form-type {
+    display: inline-block;
+    width: auto;
+  }
+  
+  
+  .form-control input[type="radio"],
+  .form-control input[type="checkbox"],
+  .form-type  {
+    display: inline-block;
+    width: auto;
+  }
+  */
+  
+  button {
+    background-color: #8BB2EB;
+  border: 1px solid #777;
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 21px;
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  }
