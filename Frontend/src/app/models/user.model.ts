@@ -4,9 +4,13 @@ export class User {
   secondName: string;
   surName: string;
   secondsurName: string;
-  sexo: string;
-  FechaNaci: string;
+  hombre: boolean;
+  mujer: boolean;
+  dia : Number;
+  mes : Number;
+  age : Number;
   email: string;
+  user: String;
   password: string;
   confirmPassword: string;
   isActive: boolean;
@@ -17,9 +21,13 @@ export class User {
     secondName = '',
     surName = '',
     secondsurName = '',
-    sexo = '',
-    FechaNaci = '',
+    hombre = false,
+    mujer = false,
+    dia = 0,
+    mes = 0,
+    age = 0,
     email = '',
+    user = "",
     isActive = true,
     password = '',
     confirmPassword = ''
@@ -30,9 +38,13 @@ export class User {
     this.secondName = secondName;
     this.surName = surName;
     this.secondsurName = secondsurName;
-    this.sexo = sexo;
-    this.FechaNaci = FechaNaci;
+    this.hombre = hombre;
+    this.mujer = mujer;
+    this.dia = dia;
+    this.mes = mes;
+    this.age = age;
     this.email = email;
+    this.user = user;
     this.isActive = isActive;
     this.password = password;
     this.confirmPassword = confirmPassword;
