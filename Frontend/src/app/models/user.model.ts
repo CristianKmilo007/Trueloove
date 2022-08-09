@@ -1,11 +1,11 @@
 export class User {
   //atributos
+  _id: string;
   firstName: string;
   secondName: string;
   surName: string;
   secondsurName: string;
-  hombre: boolean;
-  mujer: boolean;
+  sexo: string;
   dia : Number;
   mes : Number;
   age : Number;
@@ -17,12 +17,12 @@ export class User {
   
 
   constructor(
+    _id = "",
     firstName = '',
     secondName = '',
     surName = '',
     secondsurName = '',
-    hombre = false,
-    mujer = false,
+    sexo = "",
     dia = 0,
     mes = 0,
     age = 0,
@@ -34,12 +34,12 @@ export class User {
   ) {
     //inicializacion de losatributos cuando tengan un valor
 
+    this._id = _id;
     this.firstName = firstName;
     this.secondName = secondName;
     this.surName = surName;
     this.secondsurName = secondsurName;
-    this.hombre = hombre;
-    this.mujer = mujer;
+    this.sexo = sexo;
     this.dia = dia;
     this.mes = mes;
     this.age = age;
