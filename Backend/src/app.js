@@ -17,6 +17,7 @@ app.use(cors())
 require("./database.js")
 
 //Rutas
+app.use("/api/users", require("./routes/user"))
 
 
 

@@ -5,7 +5,6 @@ const jwt = require('jsonwebtoken')
 
 // modelo de users
 const User = require('../models/User.model');
-const { find } = require('../models/Product.model');
 //rutas
 
 router.post('/signup', async (request, response) => {
