@@ -9,6 +9,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './views/home/home.component';
 import { SignupComponent } from './views/signup/signup.component';
 import { PleasuresComponent } from './views/pleasures/pleasures.component';
+import { SettingsComponent } from './views/settings/settings.component';
 import { MatchComponent } from './views/match/match.component';
 import { SearchPartnerComponent } from './views/search-partner/search-partner.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -20,6 +21,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HomeComponent,
     SignupComponent,
     PleasuresComponent,
+    SettingsComponent,
     MatchComponent,
     SearchPartnerComponent,
     NavbarComponent
