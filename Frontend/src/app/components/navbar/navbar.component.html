@@ -1,0 +1,141 @@
+<nav class="navbar navbar-expand-lg bg-primary" >
+    <div class="container-fluid w-25">
+      <a class="navbar-brand" href="#">
+        <img
+          src="./assets/img/logos/truloov logo 1.png"
+          alt=""
+          style="height: 4rem"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse justify-content-end w-50" id="navbarNavDropdown">
+      <div *ngIf="!userService.loggedIn() ; else userLogged">
+      <ul class="navbar-nav me-4 d-flex justify-content-end">
+        <li class="nav-item link ms-3">
+          <a
+            class="nav-link fs-5"
+            href="#atributos"
+            id=""
+            role="button"
+            data-bs-toggle="link"
+            aria-expanded="false"
+          >
+            Atributos
+          </a>
+        </li>
+        <li class="nav-item link ms-3">
+          <a
+            class="nav-link fs-5"
+            href="#referencias"
+            id=""
+            role="button"
+            data-bs-toggle="link"
+            aria-expanded="false"
+          >
+            Referencias
+          </a>
+        </li>
+        <li class="nav-item link ms-3">
+          <a
+            class="nav-link fs-5"
+            href="#contacto"
+            id=""
+            role="button"
+            data-bs-toggle="link"
+            aria-expanded="false"
+          >
+            Contacto
+          </a>
+        </li>
+        <!--ventana Emergente-->
+        <li class="nav-item ms-3" style="width: 10rem">
+          <div class="btn btn-primary fs-5">
+            <label for="btn-modal"> Iniciar sesión </label>
+          </div>
+          <input type="checkbox" id="btn-modal" />
+          <div class="container-modal">
+            <div class="content-modal">
+              <form #userForm="ngForm">
+              <h2>Inicio Sesion</h2>
+              <div class="mb-3 letra">
+                <label for="exampleInputUsuario" class="form-label"
+                  >Correo Electronico</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Ingresa tu correo electronico"
+                  required="required"
+
+                  name="email"
+                  #email="ngModel"
+                  [(ngModel)]="userService.currentUser.email"
+                />
+              </div>
+              <div class="mb-3 letra">
+                <label for="exampleInputpassword" class="form-label"
+                  >Contraseña</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputUsuario"
+                  placeholder="Ingresa tu contraseña"
+                  required="required"
+
+                  name="password"
+                  #password="ngModel"
+                  [(ngModel)]="userService.currentUser.password"
+                />
+              </div>
+
+              <div class="btn-cerrar">
+                <a class="btn bg-primary" (click)="login(userForm)">Iniciar Sesion</a>
+              </div>
+            </form>
+            <label for="btn-modal" class="cerrar-modal"></label>
+            </div>
+            
+          </div>
+        </li>
+        
+      </ul>
+    </div>
+      <ng-template #userLogged>
+        <div class="navbar-nav ms-auto collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <a class="nav-link fs-5 mx-3" href="#">¿Necesitas ayuda?</a>
+          <a class="nav-link fs-5 mx-3" href="">Mis matches</a>
+          <a class="nav-link fs-5 mx-3" href="">Actualizar gustos</a>
+         <!-- <a class="nav-link" href="">{{ userService.decodeToken().firstName }}{{" "}}{{ userService.decodeToken().lastName }}</a> -->
+          <a class="nav-link fs-5 mx-3" href="">{{ userService.getFullName() }}</a>
+          <li><a class="dropdown-item" (click)="userService.logout()">Cerrar Sesion</a></li>
+          <div class="nav-item dropdown ">
+            <a class="nav-link fs-5 mx-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Img
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+              <li><a class="dropdown-item" href="#">Configuracion</a></li>
+              
+            </ul>
+          </div>
+          
+          
+        </div>
+      </ng-template>
+    </div>
+  </nav>
+

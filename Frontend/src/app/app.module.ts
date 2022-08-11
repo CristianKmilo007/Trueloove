@@ -10,6 +10,8 @@ import { HomeComponent } from './views/home/home.component';
 import { SignupComponent } from './views/signup/signup.component';
 import { PleasuresComponent } from './views/pleasures/pleasures.component';
 import { MatchComponent } from './views/match/match.component';
+import { SearchPartnerComponent } from './views/search-partner/search-partner.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MatchComponent } from './views/match/match.component';
     HomeComponent,
     SignupComponent,
     PleasuresComponent,
-    MatchComponent
+    MatchComponent,
+    SearchPartnerComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

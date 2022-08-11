@@ -30,7 +30,7 @@ export class UserService {
 
   logout(){
     localStorage.removeItem("token")
-    this.router.navigate(["/login"])
+    this.router.navigate(["/home"])
     return
   }
 
@@ -42,7 +42,7 @@ export class UserService {
 
   getFullName(): string {
     const data = this.decodeToken()
-    return `${data.firstName} ${data.lastName}`
+    return `${data.firstName} ${data.surName}`
   }
   
 }

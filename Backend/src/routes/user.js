@@ -58,7 +58,7 @@ router.post('/login', async (request, response) => {
 
             }
 
-            return response.status(400).json({status: "Contraseña"})
+            return response.status(400).json({status: "Contraseña incorrecta"})
 
         }
 

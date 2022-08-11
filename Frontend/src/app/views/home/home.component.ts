@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -15,7 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
     
-  
+    
   
     const slider:any = document.querySelector("#slider");
     let sliderSection = document.querySelectorAll(".slider-section");
@@ -63,6 +64,10 @@ export class HomeComponent implements OnInit {
     
   }
  
+
+  
+
+  
 
 }
 
