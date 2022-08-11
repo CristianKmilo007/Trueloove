@@ -122,13 +122,14 @@
          <!-- <a class="nav-link" href="">{{ userService.decodeToken().firstName }}{{" "}}{{ userService.decodeToken().lastName }}</a> -->
           <a class="nav-link fs-5 mx-3" href="">{{ userService.getFullName() }}</a>
           <li><a class="dropdown-item" (click)="userService.logout()">Cerrar Sesion</a></li>
+          <li><a class="dropdown-item" href="http://localhost:4200/settings">Configuracion</a></li>
           <div class="nav-item dropdown ">
             <a class="nav-link fs-5 mx-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Img
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Mi perfil</a></li>
-              <li><a class="dropdown-item" href="#">Configuracion</a></li>
+              <li><a class="dropdown-item" href="http://http://localhost:4200/settings">Configuracion</a></li>
               
             </ul>
           </div>

@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: "pleasures", component: PleasuresComponent},
   {path: "match", component: MatchComponent},
   {path: "search-partner", component: SearchPartnerComponent, canActivate: [UserGuard]},
-  {path: "settings", component: SettingsComponent},
+  {path: "settings", component: SettingsComponent, canActivate: [UserGuard]},
 
   {path: "", redirectTo: "/home", pathMatch: "full"},
   {path: "**", component: HomeComponent}
