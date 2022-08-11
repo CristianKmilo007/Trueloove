@@ -1,0 +1,71 @@
+nav{
+    background: linear-gradient(300deg,  #824ccf, #8bb2eb);
+    padding: 0 40px 0 60px;
+}
+
+nav > ul > li > a{
+    margin: 0 20px 0px 20px;
+    padding-bottom: 4px;
+}
+
+.link{
+    position:relative;
+}
+
+.link:after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    transition: all .5s;
+}
+
+.link:hover:after{
+    width: 100%;
+    left: 0;
+}
+
+.login{
+    background-color:rgb(255, 255, 255);
+    border-radius: 5px;
+    color: #5100c4;
+    padding: 2px 15px 6px 15px;
+    font-size: 22px !important;
+}
+
+.login2{
+    background: linear-gradient(90deg, rgb(0, 0, 0), transparent);
+    color: white;
+    position: absolute;
+    z-index: 2;
+}
+
+.banner{
+    min-height: 100vh;
+    position: relative;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.empecemos{
+    background: linear-gradient(300deg,  #824ccf, #8bb2eb);
+    border-radius: 40px;
+    padding-bottom: 7px;  
+    transition: all 200ms; 
+}
+
+.empecemos:hover{
+    transform: scale(1.1,1.1);
+}
+
+.title{
+    font-size: 55px;
+}
