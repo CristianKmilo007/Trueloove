@@ -7,6 +7,7 @@ import { SettingsComponent } from './views/settings/settings.component';
 import { SearchPartnerComponent } from './views/search-partner/search-partner.component';
 import { SignupComponent } from './views/signup/signup.component';
 import { UserGuard } from './guards/user.guard';
+import { PerfilComponent } from './views/perfil/perfil.component';
 
 const routes: Routes = [
   {path: "home", component: HomeComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: "match", component: MatchComponent},
   {path: "search-partner", component: SearchPartnerComponent, canActivate: [UserGuard]},
   {path: "settings", component: SettingsComponent, canActivate: [UserGuard]},
+  {path:  "perfil",component:PerfilComponent},
 
   {path: "", redirectTo: "/home", pathMatch: "full"},
   {path: "**", component: HomeComponent}
