@@ -15,6 +15,7 @@ const userSchema = new Schema(
         user: {type: String, required: true},
         password: {type: String, required: true},
         isActive: {type: Boolean, default: true},
+        //matches: {type: Array, default: []}
     },
     {
         timestamps: true,
