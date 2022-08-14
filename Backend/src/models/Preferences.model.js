@@ -21,7 +21,7 @@ const userPreferences = new Schema(
     Question15: { type: Boolean, required: false },
     Question16: { type: Boolean, required: false },
     Question17: { type: Boolean, required: false },
-    created_by: {type: String, required: true},
+    created_by: {type: String, required: false},
   },
   {
     timestamps: true,

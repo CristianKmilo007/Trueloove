@@ -18,5 +18,6 @@ require("./database.js")
 
 //Rutas
 app.use("/api/users", require("./routes/user"))
+app.use("/api/preferences", require("./routes/userPreferences"))
 
 app.listen(port, () => console.log("Ejecutando Api en el puerto", port))

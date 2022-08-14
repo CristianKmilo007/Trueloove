@@ -12,4 +12,4 @@ mongoose.connect(uri, {useUnifiedTopology: true})
     .catch((error) => console.log(error))
 
 //Exportacion
-module.exports = mongoose
+module.exports = mongoose;
