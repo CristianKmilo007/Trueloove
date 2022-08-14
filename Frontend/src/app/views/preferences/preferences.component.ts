@@ -52,10 +52,10 @@ export class PreferencesComponent implements OnInit {
     const { _id, Question1, Question2, Question3, Question4, Question5, Question6, Question7, Question8, Question9, Question10, Question11, Question12, Question13, Question14, Question15, Question16,Question17 } = form.value
     
     const user = this.userService.decodeToken()
-    const createdBy = user._id
-    console.log(createdBy)
+    const created_by = user._id
+    console.log(created_by)
 
-    const data = { Question1, Question2, Question3, Question4, Question5, Question6, Question7, Question8, Question9, Question10, Question11, Question12, Question13, Question14, Question15, Question16,Question17, createdBy }
+    const data = { Question1, Question2, Question3, Question4, Question5, Question6, Question7, Question8, Question9, Question10, Question11, Question12, Question13, Question14, Question15, Question16,Question17, created_by }
 
     this.userPreferencesService.updatePreferences(_id, data).subscribe(
       (data: any)=>{
@@ -73,10 +73,10 @@ export class PreferencesComponent implements OnInit {
 
 
   const user = this.userService.decodeToken()._id
-  const createdBy = user
-  console.log(createdBy)
+  const created_by = user
+  console.log(created_by)
 
-  const data = { createdBy, Question1, Question2, Question3, Question4, Question5, Question6, Question7, Question8, Question9, Question10, Question11, Question12, Question13, Question14, Question15, Question16,Question17}
+  const data = { created_by, Question1, Question2, Question3, Question4, Question5, Question6, Question7, Question8, Question9, Question10, Question11, Question12, Question13, Question14, Question15, Question16,Question17}
   console.log(data)
   
   this.userPreferencesService.createPreferences(data).subscribe(
@@ -84,7 +84,7 @@ export class PreferencesComponent implements OnInit {
       alert("Preferencias Creadas con exito")
       form.reset()
       this.userPreferencesService.currentPreferences = new UserPreferences()
-      this.getPreferencesByUser(createdBy)
+      this.getPreferencesByUser(created_by)
     },
     (error) => {
       console.log(error)
