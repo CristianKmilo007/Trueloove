@@ -1,0 +1,284 @@
+<div class="main">
+    <div class="video">
+      <video autoplay loop muted class="back-video">
+        <source src="../../../assets/videos/stars.mp4" type="video/mp4" />
+      </video>
+    </div>
+  
+    <div class="heroe">
+      <div>
+        <nav>
+          <img
+            src="../../../assets/img/truloov logo 1 - copia.png"
+            class="logo"
+            alt=""
+          />
+        </nav>
+      </div>
+  
+      <div class="fillForm m-5 d-flex justify-content-center">
+        <div class="border m-5 p-3 rounded">
+          <form #userPreferencesForm="ngForm">
+            <h3 class="h3 my-4 text-purple text-center">Queremos conocerte!</h3>
+            <h4 class="h4 my-4 text-purple text-center">Cuentanos sobre ti</h4>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question1"
+                aria-describedby="Question2Help"
+                name="Question1"
+                #Question1="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question1"
+              />
+              <label for="Question1" class="form-check-label"
+                >Salir a caminar</label
+              >
+            </div>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question2"
+                aria-describedby="Question2Help"
+                name="Question2"
+                #Question2="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question2"
+              />
+              <label for="Question2" class="form-check-label">Ir al cine</label>
+            </div>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question3"
+                aria-describedby="Question3Help"
+                name="Question3"
+                #Question3="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question3"
+              />
+              <label for="Question3" class="form-check-label"
+                >Cenar en casa</label
+              >
+            </div>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question4"
+                aria-describedby="Question4Help"
+                name="Question4"
+                #Question4="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question4"
+              />
+              <label for="Question4" class="form-check-label"
+                >Salir a cenar a un restaurante</label
+              >
+            </div>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question5"
+                aria-describedby="Question5Help"
+                name="Question5"
+                #Question5="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question5"
+              />
+              <label for="Question5" class="form-check-label">Viajar</label>
+            </div>
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question6"
+                aria-describedby="Question6Help"
+                name="Question6"
+                #Question6="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question6"
+              />
+              <label for="Question6" class="form-check-label">Leer</label>
+            </div>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question7"
+                aria-describedby="Question7Help"
+                name="Question7"
+                #Question7="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question7"
+              />
+              <label for="Question7" class="form-check-label">Bailar</label>
+            </div>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question8"
+                aria-describedby="Question8Help"
+                name="Question8"
+                #Question8="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question8"
+              />
+              <label for="Question8" class="form-check-label"
+                >Salir con amigos</label
+              >
+            </div>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question9"
+                aria-describedby="Question9Help"
+                name="Question9"
+                #Question9="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question9"
+              />
+              <label for="Question9" class="form-check-label"
+                >Pasar tiempo en familia</label
+              >
+            </div>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question10"
+                aria-describedby="Question10Help"
+                name="Question10"
+                #Question10="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question10"
+              />
+              <label for="Question10" class="form-check-label"
+                >Salir por un helado</label
+              >
+            </div>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question11"
+                aria-describedby="Question11Help"
+                name="Question11"
+                #Question11="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question11"
+              />
+              <label for="Question11" class="form-check-label"
+                >Conocer nuevas personas</label
+              >
+            </div>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question12"
+                aria-describedby="Question12Help"
+                name="Question12"
+                #Question12="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question12"
+              />
+              <label for="Question12" class="form-check-label"
+                >Pasear tu mascota</label
+              >
+            </div>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question13"
+                aria-describedby="Question13Help"
+                name="Question13"
+                #Question13="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question13"
+              />
+              <label for="Question13" class="form-check-label"
+                >Deportes Extremos</label
+              >
+            </div>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question14"
+                aria-describedby="Question14Help"
+                name="Question14"
+                #Question14="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question14"
+              />
+              <label for="Question14" class="form-check-label"
+                >Conocer lugares historicos y Museos</label
+              >
+            </div>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question15"
+                aria-describedby="Question15Help"
+                name="Question15"
+                #Question15="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question15"
+              />
+              <label for="Question15" class="form-check-label"
+                >Cumplir fantasias sexuales</label
+              >
+            </div>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question16"
+                aria-describedby="Question16Help"
+                name="Question16"
+                #Question16="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question16"
+              />
+              <label for="Question16" class="form-check-label"
+                >Casarme y tener hijos</label
+              >
+            </div>
+  
+            <div class="mb-3 d-flex" style="width: 100%">
+              <input
+                type="checkbox"
+                class="form-check-input mx-2 mt-1"
+                id="Question17"
+                aria-describedby="Question17Help"
+                name="Question17"
+                #Question17="ngModel"
+                [(ngModel)]="userPreferencesService.currentPreferences.Question17"
+              />
+              <label for="Question17" class="form-check-label"
+                >Tener mi propio negocio</label
+              >
+            </div>
+  
+            <div class="mt-5 d-flex justify-content-center">
+              <button
+                type="submit"
+                class="btn btn-success"
+                (click)="createPreferences(userPreferencesForm)"
+              >
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

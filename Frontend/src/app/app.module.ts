@@ -14,6 +14,7 @@ import { MatchComponent } from './views/match/match.component';
 import { SearchPartnerComponent } from './views/search-partner/search-partner.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AyudaComponent } from './views/ayuda/ayuda.component';
+import { PreferencesComponent } from './views/preferences/preferences.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AyudaComponent } from './views/ayuda/ayuda.component';
     MatchComponent,
     SearchPartnerComponent,
     NavbarComponent,
-    AyudaComponent
+    AyudaComponent,
+    PreferencesComponent
   ],
   imports: [
     BrowserModule,

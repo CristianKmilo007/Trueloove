@@ -8,6 +8,7 @@ import { SearchPartnerComponent } from './views/search-partner/search-partner.co
 import { SignupComponent } from './views/signup/signup.component';
 import { UserGuard } from './guards/user.guard';
 import { AyudaComponent } from './views/ayuda/ayuda.component';
+import { PreferencesComponent } from './views/preferences/preferences.component';
 
 const routes: Routes = [
   {path: "home", component: HomeComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: "search-partner", component: SearchPartnerComponent, canActivate: [UserGuard]},
   {path: "settings", component: SettingsComponent, canActivate: [UserGuard]},
   {path: "ayuda", component: AyudaComponent, canActivate: [UserGuard]},
+  {path: "preferences", component: PreferencesComponent},
 
   {path: "", redirectTo: "/home", pathMatch: "full"},
   {path: "**", component: HomeComponent}

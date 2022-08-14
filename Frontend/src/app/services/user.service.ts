@@ -24,6 +24,12 @@ export class UserService {
     return this.http.post(`${this.URI_USERS_BACKEND}/signup`, formUser )
   }
 
+  getAll(){
+    return this.http.get(`${this.URI_USERS_BACKEND}/get-all`)
+  }
+
+
+
   loggedIn(){
     return localStorage.getItem("token") ? true : false
   }
