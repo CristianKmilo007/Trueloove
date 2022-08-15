@@ -47,28 +47,54 @@
           <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
+        <form class="modal-body" #userForm="ngForm">
         <div class="mt-2">
             <label for="PN" class="me-2">Primer Nombre </label>
-            <input type="text" name="PN">
+            <input type="text" name="PN"
+            
+            name="firstName"
+            #firstName="ngModel"
+            [(ngModel)]="userService.currentUser.firstName"
+            
+            >
+
+            
         </div>
         <div class="mt-2">
             <label for="SN" class="me-2">Segundo Nombre </label>
-            <input type="text" name="PN">
+            <input type="text" name="PN"
+            
+            name="secondName"
+          #secondName="ngModel"
+          [(ngModel)]="userService.currentUser.secondName"
+            
+            >
         </div>
           <div class="mt-2">
             <label for="PA" class="me-2">Primer Apellido </label>
-            <input type="text" name="PN">
+            <input type="text" name="PN"
+            
+            name="surName"
+          #surName="ngModel"
+          [(ngModel)]="userService.currentUser.surName"
+            
+            >
           </div>
           <div class="mt-2">
             <label for="SN" class="me-2">Segundo Apellido </label>
-            <input type="text" name="PN">
+            <input type="text" name="PN"
+            
+            name="secondsurName"
+            #secondsurName="ngModel"
+            [(ngModel)]="userService.currentUser.secondsurName"
+            
+            >
           </div>
           
-        </div>
+        </form>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar</button>
+          <button type="button" class="btn btn-primary"(click)="updatePerfil(userForm)">Guardar</button>
         </div>
       </div>
     </div>
@@ -101,20 +127,26 @@
           <!-- Modal -->
   <div class="modal fade" id="descripcion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <form class="modal-content" #userForm="ngForm">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
             <label for="des" class="me-2">Descripción</label>
-          <input type="text" name="des">
+          <input type="text" name="des"
+          
+          name="description"
+          #description="ngModel"
+          [(ngModel)]="userService.currentUser.description"
+
+          >
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar</button>
+          <button type="button" class="btn btn-primary" (click)="updatePerfil(userForm)">Guardar</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
   <!--  -->
@@ -139,20 +171,26 @@
           <!-- Modal -->
   <div class="modal fade" id="info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
+      <form class="modal-content" #userForm="ngForm">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
             <label for="tel" class="me-2">Teléfono</label>
-          <input type="text" name="tel">
+          <input type="text" name="tel"
+          
+          name="phone"
+          #phone="ngModel"
+          [(ngModel)]="userService.currentUser.phone"
+          
+          >
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar</button>
+          <button type="button" class="btn btn-primary" (click)="updatePerfil(userForm)">Guardar</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
   <!--  -->
