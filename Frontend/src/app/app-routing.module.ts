@@ -9,6 +9,7 @@ import { SignupComponent } from './views/signup/signup.component';
 import { UserGuard } from './guards/user.guard';
 import { AyudaComponent } from './views/ayuda/ayuda.component';
 import { PreferencesComponent } from './views/preferences/preferences.component';
+import { MatchAllComponent } from './views/match-all/match-all.component';
 
 const routes: Routes = [
   {path: "home", component: HomeComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: "settings", component: SettingsComponent, canActivate: [UserGuard]},
   {path: "ayuda", component: AyudaComponent, canActivate: [UserGuard]},
   {path: "preferences", component: PreferencesComponent},
+  {path: "match-all", component: MatchAllComponent, canActivate: [UserGuard]},
 
   {path: "", redirectTo: "/home", pathMatch: "full"},
   {path: "**", component: HomeComponent}

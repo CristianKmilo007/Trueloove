@@ -50,5 +50,7 @@ export class UserService {
     const data = this.decodeToken()
     return `${data.firstName} ${data.surName}`
   }
+
+  
   
 }
