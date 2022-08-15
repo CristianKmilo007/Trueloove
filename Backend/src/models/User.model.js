@@ -15,6 +15,11 @@ const userSchema = new Schema(
         user: {type: String, required: true},
         password: {type: String, required: true},
         isActive: {type: Boolean, default: true},
+        image: {type: String, required: false},
+        description: {type: String, required: false},
+        phone: {type: Number, required: false},
+
+        
     },
     {
         timestamps: true,

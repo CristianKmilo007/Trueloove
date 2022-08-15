@@ -73,6 +73,21 @@ router.post('/login', async (request, response) => {
 
 })
 
+router.put('/users/:id', async (request, response) => {
+    //response.send('Actualizar un usuario específico.');
+    const { id } = request.params;
+   
+    //console.log('user:', user);
+    userSchema
+      .updateOne({ _id: id }, { $set: user })
+      .then((data) => {
+        response.json({ success: data });
+      })
+      .catch((error) => {
+        response.json({ failured: "Error al actualizar" });
+      });
+  });
+
 
 // exportariamos las rutas
 module.exports = router
