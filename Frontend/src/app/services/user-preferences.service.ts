@@ -36,4 +36,8 @@ export class UserPreferencesService {
     return this.http.put(`${this.URI_PREFERENCES}/update-preferences/${id}`, data)
   }
 
+  matchPreferences(): any{
+    return this.http.get(`${this.URI_PREFERENCES}/match/:id`)
+  }
+
 }
