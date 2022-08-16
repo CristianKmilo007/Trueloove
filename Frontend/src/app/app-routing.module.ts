@@ -10,6 +10,7 @@ import { UserGuard } from './guards/user.guard';
 import { AyudaComponent } from './views/ayuda/ayuda.component';
 import { PreferencesComponent } from './views/preferences/preferences.component';
 import { MatchAllComponent } from './views/match-all/match-all.component';
+import { PerfilComponent } from './views/perfil/perfil.component';
 
 const routes: Routes = [
   {path: "home", component: HomeComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: "ayuda", component: AyudaComponent, canActivate: [UserGuard]},
   {path: "preferences", component: PreferencesComponent},
   {path: "match-all", component: MatchAllComponent, canActivate: [UserGuard]},
+  {path:  "perfil",component:PerfilComponent},
 
   {path: "", redirectTo: "/home", pathMatch: "full"},
   {path: "**", component: HomeComponent}

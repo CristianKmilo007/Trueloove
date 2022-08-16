@@ -30,6 +30,10 @@ export class UserService {
 
 
 
+  updatePerfil(formUser:any){
+    return this.http.put(`${this.URI_USERS_BACKEND}/update/:id`, formUser)
+  }
+
   loggedIn(){
     return localStorage.getItem("token") ? true : false
   }

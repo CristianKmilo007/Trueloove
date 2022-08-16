@@ -73,5 +73,34 @@ router.get("/get-all", async (req, res) => {
   res.status(200).json({ users });
 });
 
+
+
+router.put('/users/:id', async (request, response) => {
+    //response.send('Actualizar un usuario específico.');
+    const { id } = request.params;
+   
+    console.log(User);
+    await User
+      .updateOne({ _id: id }, { $set: User })
+      .then((data) => {
+        return response.json({ success: data });
+      })
+      .catch((error) => {
+        return response.json({ failured: "Error al actualizar" });
+      });
+  });
+
+
+
+
+router.put("/update/:id", async (request, response) => {
+
+    const id = request.params.id
+
+    const updated = await User.findByIdAndUpdate(id, {$set: request.body})
+
+    return response.status(201).json({status: "Elemneto actualizado"})
+})
+
 // exportariamos las rutas
-module.exports = router;
+module.exports = router

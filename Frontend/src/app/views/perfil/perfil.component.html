@@ -1,0 +1,207 @@
+<div class="d-flex container flex-wrap w-100">
+  <div class="container mt-3 mb-3" style="width: 18rem">
+    <div>
+      <img
+        src="./assets/img/chicas 11.webp"
+        alt=""
+        style="width: 18rem; height: 18rem"
+        class="rounded-circle"
+      />
+    </div>
+    <div>
+      <img
+        src="./assets/img/color.PNG"
+        style="width: 3rem; height: 3rem; top: -10rem; right: -16rem"
+        alt=""
+        class="rounded-circle position-relative"
+      />
+    </div>
+    <div>
+      <i
+        class="material-icons text-black position-relative"
+        style="cursor: pointer; top: -12.4rem; right: -16.7rem"
+        >add_a_photo</i
+      >
+    </div>
+  </div>
+
+  <div class="d-flex container flex-wrap">
+    <div class="w-25 text-center mt-3">
+      <i class="material-icons text-black m-2" style="cursor: pointer"
+        >person</i
+      >
+    </div>
+    <div class="w-50">
+      <h2 class="mt-2 w-100">Nombre</h2>
+      <p class="mt-2 w-100">Eric Muñoz</p>
+    </div>
+    <div class="w-25 text-center">
+        <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#Nombre">
+            <i class="material-icons text-black m-2" style="cursor: pointer" >edit</i>
+          </button> 
+          <!-- Modal -->
+  <div class="modal fade" id="Nombre" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form class="modal-body" #userForm="ngForm">
+        <div class="mt-2">
+            <label for="PN" class="me-2">Primer Nombre </label>
+            <input type="text" name="PN"
+            
+            name="firstName"
+            #firstName="ngModel"
+            [(ngModel)]="userService.currentUser.firstName"
+            
+            >
+
+            
+        </div>
+        <div class="mt-2">
+            <label for="SN" class="me-2">Segundo Nombre </label>
+            <input type="text" name="PN"
+            
+            name="secondName"
+          #secondName="ngModel"
+          [(ngModel)]="userService.currentUser.secondName"
+            
+            >
+        </div>
+          <div class="mt-2">
+            <label for="PA" class="me-2">Primer Apellido </label>
+            <input type="text" name="PN"
+            
+            name="surName"
+          #surName="ngModel"
+          [(ngModel)]="userService.currentUser.surName"
+            
+            >
+          </div>
+          <div class="mt-2">
+            <label for="SN" class="me-2">Segundo Apellido </label>
+            <input type="text" name="PN"
+            
+            name="secondsurName"
+            #secondsurName="ngModel"
+            [(ngModel)]="userService.currentUser.secondsurName"
+            
+            >
+          </div>
+          
+        </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary"(click)="updatePerfil(userForm)">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+    </div>
+    <hr class="w-100" />
+  </div>
+  <!-- ventana emergente1 -->
+  
+  <div class="d-flex container flex-wrap">
+    <div class="w-25 text-center mt-5">
+      <i class="material-icons text-black m-2" style="cursor: pointer"
+        >import_contacts</i
+      >
+    </div>
+    <div class="w-50">
+      <h2 class="mt-2 w-100">Descripcion personal</h2>
+      <p class="mt-2 w-100">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi,
+        repellat neque. Modi iure vitae, ullam aliquam dignissimos voluptatem?
+        Amet excepturi vitae optio doloremque nihil facilis. Sequi assumenda
+        nihil debitis qui.
+      </p>
+    </div>
+    <div class="w-25 text-center">
+        <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#descripcion">
+            <i class="material-icons text-black m-2" style="cursor: pointer" >edit</i>
+          </button> 
+          <!-- Modal -->
+  <div class="modal fade" id="descripcion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form class="modal-content" #userForm="ngForm">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label for="des" class="me-2">Descripción</label>
+          <input type="text" name="des"
+          
+          name="description"
+          #description="ngModel"
+          [(ngModel)]="userService.currentUser.description"
+
+          >
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" (click)="updatePerfil(userForm)">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--  -->
+    </div>
+    <hr class="w-100" />
+  </div>
+  <div class="d-flex container flex-wrap">
+    <div class="w-25 text-center mt-5">
+      <i class="material-icons text-black m-2" style="cursor: pointer"
+        >lock_open</i
+      >
+    </div>
+    <div class="w-50">
+      <h2 class="mt-2 w-100">Información desbloqueada con el match</h2>
+      <h3 class="mt-2 w-100">Telefono</h3>
+      <p class="mt-2 w-100">3166199023</p>
+    </div>
+    <div class="w-25 text-center">
+        <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#info">
+            <i class="material-icons text-black m-2" style="cursor: pointer" >edit</i>
+          </button> 
+          <!-- Modal -->
+  <div class="modal fade" id="info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form class="modal-content" #userForm="ngForm">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <label for="tel" class="me-2">Teléfono</label>
+          <input type="text" name="tel"
+          
+          name="phone"
+          #phone="ngModel"
+          [(ngModel)]="userService.currentUser.phone"
+          
+          >
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" (click)="updatePerfil(userForm)">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--  -->
+    </div>
+    <hr class="w-100" />
+  </div>
+</div>
+<div class="d-flex container flex-wrap mt-5 mb-5" style="width: 18rem">
+  <img
+    src="./assets/img/logos/truloov logo 1.png"
+    alt=""
+    style="width: 18rem"
+  />
+</div>

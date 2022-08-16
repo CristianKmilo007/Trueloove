@@ -14,6 +14,9 @@ export class User {
   password: string;
   confirmPassword: string;
   isActive: boolean;
+  image: string;
+  description: string;
+  phone: number;
   
 
   constructor(
@@ -30,7 +33,10 @@ export class User {
     user = "",
     isActive = true,
     password = '',
-    confirmPassword = ''
+    confirmPassword = '',
+    image = "",
+    description = "",
+    phone = 0
   ) {
     //inicializacion de losatributos cuando tengan un valor
 
@@ -48,6 +54,9 @@ export class User {
     this.isActive = isActive;
     this.password = password;
     this.confirmPassword = confirmPassword;
+    this.image = image;
+    this.description = description;
+    this.phone = phone;
 
   }
 }

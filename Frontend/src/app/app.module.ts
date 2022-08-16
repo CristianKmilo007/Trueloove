@@ -16,6 +16,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AyudaComponent } from './views/ayuda/ayuda.component';
 import { PreferencesComponent } from './views/preferences/preferences.component';
 import { MatchAllComponent } from './views/match-all/match-all.component';
+import { PerfilComponent } from './views/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MatchAllComponent } from './views/match-all/match-all.component';
     NavbarComponent,
     AyudaComponent,
     PreferencesComponent,
-    MatchAllComponent
+    MatchAllComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
