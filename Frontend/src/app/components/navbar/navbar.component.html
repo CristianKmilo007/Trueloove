@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-primary" >
     <div class="container-fluid w-25">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="http://localhost:4200/search-partner">
         <img
           src="./assets/img/logos/truloov logo 1.png"
           alt=""
@@ -117,20 +117,20 @@
       <ng-template #userLogged>
         <div class="navbar-nav ms-auto collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <a class="nav-link fs-5 mx-3" href="http://localhost:4200/ayuda">¿Necesitas ayuda?</a>
-          <a class="nav-link fs-5 mx-3" href="">Mis matches</a>
+          <a class="nav-link fs-5 mx-3" href="http://localhost:4200/match">Mis matches</a>
           <a class="nav-link fs-5 mx-3" href="">Actualizar gustos</a>
          <!-- <a class="nav-link" href="">{{ userService.decodeToken().firstName }}{{" "}}{{ userService.decodeToken().lastName }}</a> -->
           <a class="nav-link fs-5 mx-3" href="">{{ userService.getFullName() }}</a>
-          <li><a class="dropdown-item" (click)="userService.logout()">Cerrar Sesion</a></li>
-          <li><a class="dropdown-item" href="http://localhost:4200/settings">Configuracion</a></li>
-          <div class="nav-item dropdown ">
+          
+          
+          <div class="nav-item dropdown-center ">
             <a class="nav-link fs-5 mx-3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Img
+              <img src="../../../assets/img/13.jpg" alt="" class="border border-3 rounded-circle imgPerfil" style="width: 50px;">
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Mi perfil</a></li>
-              <li><a class="dropdown-item" href="http://http://localhost:4200/settings">Configuracion</a></li>
-              
+              <li><a class="dropdown-item" href="http://localhost:4200/settings">Configuracion</a></li>
+              <li><a class="dropdown-item" (click)="userService.logout()">Cerrar Sesion</a></li>
             </ul>
           </div>
           
