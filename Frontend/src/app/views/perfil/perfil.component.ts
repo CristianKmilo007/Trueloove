@@ -13,6 +13,7 @@ export class PerfilComponent implements OnInit {
   constructor(public userService: UserService) { }
 
   ngOnInit(): void {
+
   }
 
   updatePerfil(form: NgForm){
@@ -43,10 +44,6 @@ export class PerfilComponent implements OnInit {
       }
     )
     
-    
   }
-
-
-
 
 }
