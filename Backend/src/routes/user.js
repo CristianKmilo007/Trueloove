@@ -77,17 +77,26 @@ router.put('/users/:id', async (request, response) => {
     //response.send('Actualizar un usuario específico.');
     const { id } = request.params;
    
-    //console.log('user:', user);
-    userSchema
-      .updateOne({ _id: id }, { $set: user })
+    console.log(User);
+    await User
+      .updateOne({ _id: id }, { $set: User })
       .then((data) => {
-        response.json({ success: data });
+        return response.json({ success: data });
       })
       .catch((error) => {
-        response.json({ failured: "Error al actualizar" });
+        return response.json({ failured: "Error al actualizar" });
       });
   });
 
 
 // exportariamos las rutas
 module.exports = router
+
+router.put("/update/:id", async (request, response) => {
+
+    const id = request.params.id
+
+    const updated = await User.findByIdAndUpdate(id, {$set: request.body})
+
+    return response.status(201).json({status: "Elemneto actualizado"})
+})
