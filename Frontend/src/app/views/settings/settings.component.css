@@ -84,6 +84,9 @@ input:checked + .slider:before {
 
  /*ventana emergente*/
      
+ .btn {
+  width: 7rem;
+ }
       .boton-modal {
         padding: 40px;
         background-color: white;
