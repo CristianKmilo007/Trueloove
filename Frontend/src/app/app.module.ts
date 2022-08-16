@@ -17,6 +17,7 @@ import { AyudaComponent } from './views/ayuda/ayuda.component';
 import { PreferencesComponent } from './views/preferences/preferences.component';
 import { MatchAllComponent } from './views/match-all/match-all.component';
 import { PerfilComponent } from './views/perfil/perfil.component';
+import { UpdatePreferencesComponent } from './views/update-preferences/update-preferences.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PerfilComponent } from './views/perfil/perfil.component';
     AyudaComponent,
     PreferencesComponent,
     MatchAllComponent,
-    PerfilComponent
+    PerfilComponent,
+    UpdatePreferencesComponent
   ],
   imports: [
     BrowserModule,
