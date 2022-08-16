@@ -168,3 +168,10 @@ body{
         left: -66px !important;
       }
       
+      .imgPerfil{
+        border-color: #97FC00 !important;
+      }
+
+      .dropdown-item{
+        cursor: pointer !important;
+      }
