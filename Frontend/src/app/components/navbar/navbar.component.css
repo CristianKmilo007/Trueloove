@@ -163,4 +163,8 @@ body{
           width: 90%;
         }
       }
+
+      .dropdown-menu{
+        left: -66px !important;
+      }
       

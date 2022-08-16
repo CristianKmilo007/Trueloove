@@ -12,4 +12,12 @@ export class MatchAllComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  like(){
+
+    let like:any = document.querySelector(".like")
+
+    like = like.style.backgroundColor = "#8bb2eb"
+
+  }
+
 }
